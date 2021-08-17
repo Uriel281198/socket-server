@@ -1,0 +1,28 @@
+instalar socket io 
+npm i sockect.io
+
+instalar express
+
+
+
+ /* setTimeout(() => {
+        socket.emit("mensaje-cliente", {
+          msg: "cliente",
+          nombre: "uriel",
+        });
+      }, 2000); */
+
+lado cliente
+ socket.on("mensaje-bienvenida", (data) => {
+        console.log(data);
+      });
+
+lado del servidor 
+      socket.emit("mensaje-bienvenida", {
+    msg: "Welcome to sever",
+    data: new Date(),
+  });
+
+  socket.on("mensaje-cliente", (dataClient) => {
+    console.log(dataClient);
+  });
